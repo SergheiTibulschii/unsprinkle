@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+import {fontface} from "./fontface";
+import vars from './vars'
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -50,7 +52,6 @@ table {
 
 * {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
 }
@@ -71,6 +72,13 @@ html {
   --color-secondary: hsl(333deg 100% 45%);
   --color-text: var(--color-gray-1000);
   --color-background: white;
+}
+
+${fontface};
+${vars};
+
+body {
+  font-family: var(--ff-primary);
 }
 `;
 
